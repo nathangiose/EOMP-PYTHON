@@ -3,7 +3,7 @@
 
 
 from tkinter import *
-import pygame
+
 
 # CREATING THE GUI
 
@@ -21,12 +21,6 @@ img = PhotoImage(file="powerball.png")
 canvas = Canvas(root, width=391, height=129)
 canvas.create_image(0, 0, anchor=NW, image=img)
 canvas.place(x=480, y=280)
-
-# IMPORTING SOUND
-pygame.mixer.init()
-def play_sound():
-   pygame.mixer.music.load("sample1.mp3")
-   pygame.mixer.music.play()
 
 
 def play_nw():

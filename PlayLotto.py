@@ -4,6 +4,7 @@
 from tkinter import *
 from tkinter import messagebox
 import random
+from playsound import playsound
 
 
 # CONFIGURING GUI
@@ -175,7 +176,7 @@ class allNumbers:
 
         self.play_btn = Button(lotto, text="Play", bg="#2962ff", bd="0", command=self.play)
         self.play_btn.place(x=175, y=600)
-        self.claim_btn = Button(lotto, bg="#2962ff",bd="0", text="Claim Prize")
+        self.claim_btn = Button(lotto, bg="#2962ff",bd="0", text="Claim Prize", command=self.claim_prize)
         self.claim_btn.place(x=240, y=600)
         self.replay_btn = Button(lotto, text="Play Again", bg="#2962ff", bd="0", command=self.replay)
         self.replay_btn.place(x=350, y=600)
@@ -254,6 +255,8 @@ class allNumbers:
                 correct3 += 1
             if correct3 == 2:
                 earnings3 = prizes[2]
+                with open("player_id.txt", 'a') as text:
+                    text.write('P')
             elif correct3 == 3:
                 earnings3 = prizes[3]
             elif correct3 == 4:
@@ -272,6 +275,11 @@ class allNumbers:
             self.lotto_no.config(text=lotto_list)
         else:
             messagebox.showinfo("Error", "Please use all your tries first")
+
+
+    def claim_prize(self):
+        root.destroy()
+        import Drag
 
     def replay(self):
         self.boardA.config(text="")

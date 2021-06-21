@@ -16,7 +16,7 @@ bank_win.geometry("500x250")
 # INSERT IMAGE
 
 
-img = PhotoImage(file="powerball.png")
+img = PhotoImage(file="../powerball.png")
 canvas = Canvas(bank_win, width=391, height=129)
 canvas.create_image(0, 0, anchor=NW, image=img)
 canvas.pack()
@@ -88,7 +88,7 @@ def register():
     # INSERT IMAGE
 
 
-    img = PhotoImage(file="powerball.png")
+    img = PhotoImage(file="../powerball.png")
     canvas = Canvas(info_win, width=391, height=129)
     canvas.create_image(0, 0, anchor=NW, image=img)
     canvas.pack()

@@ -14,7 +14,7 @@ root.resizable(0, 0)
 # INSERT IMAGE
 
 
-img = PhotoImage(file="powerball.png")
+img = PhotoImage(file="../powerball.png")
 canvas = Canvas(root, width=391, height=129)
 canvas.create_image(0, 0, anchor=NW, image=img)
 canvas.place(x=55, y=0)
